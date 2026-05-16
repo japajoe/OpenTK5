@@ -1,15 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PackageId>JAJ.Packages.OpenTK5</PackageId>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Authors>W.M.R Jap-A-Joe</Authors>
     <PackageTags>OpenTK OpenGL Vector Math Game Graphics</PackageTags>
     <Description>
-      A framework for rendering 3D graphics with OpenGL. This library combines OpenTK.Core/OpenTK.Graphics/OpenTK.Mathematics into a single binary.
+      A framework for rendering 3D graphics with OpenGL. This library combines all of OpenTK into a single binary.
     </Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,6 +22,10 @@
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="/"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="runtimes\**" PackagePath="runtimes" Visible="false" />
   </ItemGroup>
 
 </Project>
